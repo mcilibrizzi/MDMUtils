@@ -11,6 +11,7 @@ namespace AccountOBJ
     {
         private string cliente;
         private string accountAD;
+        private int test;
 
         
         public Account(string cliente, string accountAD)
