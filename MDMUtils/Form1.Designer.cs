@@ -32,12 +32,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.accountList = new System.Windows.Forms.ListView();
+            this.accountName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.typeAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.searchAccountButton = new System.Windows.Forms.Button();
             this.inputJDA = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.accountName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.typeAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,17 @@
             this.accountList.TabIndex = 3;
             this.accountList.UseCompatibleStateImageBehavior = false;
             this.accountList.View = System.Windows.Forms.View.Details;
+            this.accountList.SelectedIndexChanged += new System.EventHandler(this.accountList_SelectedIndexChanged);
+            // 
+            // accountName
+            // 
+            this.accountName.Text = "Account";
+            this.accountName.Width = 174;
+            // 
+            // typeAccount
+            // 
+            this.typeAccount.Text = "Type";
+            this.typeAccount.Width = 251;
             // 
             // label1
             // 
@@ -115,16 +126,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Create Account";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // accountName
-            // 
-            this.accountName.Text = "Account";
-            this.accountName.Width = 174;
-            // 
-            // typeAccount
-            // 
-            this.typeAccount.Text = "Type";
-            this.typeAccount.Width = 251;
             // 
             // Form1
             // 

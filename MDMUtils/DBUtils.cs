@@ -43,6 +43,7 @@ namespace MDMUtils
         {
             string query = "select clienti.nome AS Cliente , tipologia.tipoaccount AS Tipologia , account.accountAD AS AccountAD from tipologia, account, clienti where clienti.idcliente = account.idcliente AND tipologia.idtype = account.idtipologia AND account.JDA = '60120'";
 
+            dbConnection.Open();
             MySqlCommand cmdGetUser = new MySqlCommand(query, dbConnection);
 
             MySqlDataReader getUserReader = cmdGetUser.ExecuteReader();
