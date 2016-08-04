@@ -41,6 +41,20 @@ namespace MDMUtils
 
         public List<Account> searchAccount(string JDA)
         {
+            string query = "select clienti.nome AS Cliente , tipologia.tipoaccount AS Tipologia , account.accountAD AS AccountAD from tipologia, account, clienti where clienti.idcliente = account.idcliente AND tipologia.idtype = account.idtipologia AND account.JDA = '60120'";
+
+            MySqlCommand cmdGetUser = new MySqlCommand(query, dbConnection);
+
+            MySqlDataReader getUserReader = cmdGetUser.ExecuteReader();
+
+            while (getUserReader.Read())
+            {
+                Console.WriteLine(getUserReader[0] + " " + getUserReader[1] + " " + getUserReader [2]);
+            }
+
+            getUserReader.Close();
+
+            return null;
         }
     }
 }
